@@ -1,4 +1,6 @@
 //import Header from "../components/Header";
+import logo from "../assets/logo/01_unpuzzle_logo.png";
+import childImage from "../assets/images/Child_Image.png";
 import RegistrationForm from "../components/RegistrationForm";
 import Footer from "../components/Footer";
 import "../styles/registration.css";
@@ -14,7 +16,7 @@ function StudentRegistration() {
 
             <a href="/" className="logo">
               <img
-                src="/src/assets/logo/01_unpuzzle_logo.png"
+                src={logo}
                 alt="Unpuzzle Club"
               />
             </a>
@@ -33,7 +35,7 @@ function StudentRegistration() {
 
           <div className="hero-visual">
             <img
-              src="/src/assets/images/Child_Image.png"
+              src={childImage}
               alt="Child playing chess"
             />
           </div>
