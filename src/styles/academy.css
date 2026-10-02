@@ -42,7 +42,8 @@
       rgba(0, 0, 0, 0.40),
       rgba(0, 0, 0, 0.40)
     ),
-    url("/src/assets/academy/hero-bg.jpg");
+    /* url("/src/assets/academy/hero-bg.jpg"); */
+    var(--hero-bg);
 
   background-size: cover;
   background-position: center;

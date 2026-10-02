@@ -7,10 +7,11 @@ import Approach from "../components/academy/Approach";
 //import AcademyFooter from "../components/academy/AcademyFooter";
 
 import "../styles/academy.css";
+import heroBg from "../assets/academy/hero-bg.jpg";
 
 function AcademyHome() {
   return (
-    <div className="academy-page">
+    <div className="academy-page" style={{ "--hero-bg": `url(${heroBg})` }}>
 
       <main>
         {/* Hero / Home */}

@@ -1,11 +1,11 @@
 
 import { useEffect, useRef } from "react";
 
-import gallery01 from "../assets/academy/gallery-01.jpg";
-import gallery02 from "../assets/academy/gallery-02.jpg";
-import gallery03 from "../assets/academy/gallery-03.jpg";
-import gallery04 from "../assets/academy/gallery-04.jpg";
-import gallery05 from "../assets/academy/gallery-05.jpg";
+import gallery01 from "../../assets/academy/gallery-01.jpg";
+import gallery02 from "../../assets/academy/gallery-02.jpg";
+import gallery03 from "../../assets/academy/gallery-03.jpg";
+import gallery04 from "../../assets/academy/gallery-04.jpg";
+import gallery05 from "../../assets/academy/gallery-05.jpg";
 
 const galleryItems = [
   {
