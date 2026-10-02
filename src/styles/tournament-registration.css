@@ -1,0 +1,257 @@
+/* =========================================================
+   TOURNAMENT REGISTRATION
+   ========================================================= */
+
+.tournament-registration-page {
+  min-height: 100vh;
+  background: #f4efe7;
+}
+
+
+/* =========================================================
+   HERO / BACKGROUND IMAGE
+   ========================================================= */
+
+.tournament-registration-hero {
+  min-height: 420px;
+
+  background-image: url("../assets/images/tournament-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+}
+
+
+.tournament-registration-overlay {
+  min-height: 420px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.35);
+
+  padding: 40px 20px;
+}
+
+
+.tournament-registration-content {
+  text-align: center;
+  color: #ffffff;
+}
+
+
+.tournament-registration-content h1 {
+  margin: 0;
+
+  font-size: clamp(38px, 6vw, 70px);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+
+.tournament-registration-content p {
+  margin-top: 15px;
+
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   FORM SECTION
+   ========================================================= */
+
+.tournament-form-section {
+  padding: 70px 20px;
+
+  display: flex;
+  justify-content: center;
+}
+
+
+.tournament-form-card {
+  width: 100%;
+  max-width: 700px;
+
+  background: #fffaf3;
+
+  padding: 40px;
+
+  border-radius: 18px;
+
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
+}
+
+
+.tournament-form-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+.tournament-form-header h2 {
+  margin: 0;
+
+  font-size: 32px;
+
+  color: #29241f;
+}
+
+
+.tournament-form-header p {
+  margin-top: 10px;
+
+  color: #6b6259;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.tournament-registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.tournament-registration-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+.tournament-registration-form label {
+  font-size: 15px;
+  font-weight: 600;
+
+  color: #302a24;
+}
+
+
+.tournament-registration-form label span {
+  font-weight: 400;
+  color: #8a8178;
+}
+
+
+.tournament-registration-form input,
+.tournament-registration-form select {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 13px 15px;
+
+  border: 1px solid #d8cec2;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  font-size: 15px;
+
+  color: #302a24;
+
+  outline: none;
+
+  transition: border-color 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+
+.tournament-registration-form input:focus,
+.tournament-registration-form select:focus {
+  border-color: #8b6f47;
+
+  box-shadow: 0 0 0 3px rgba(139, 111, 71, 0.12);
+}
+
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.tournament-registration-form .register-button {
+  width: 100%;
+
+  margin-top: 10px;
+
+  padding: 14px 20px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #29241f;
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+
+.tournament-registration-form .register-button:hover {
+  background: #8b6f47;
+}
+
+
+.tournament-registration-form .register-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .tournament-registration-hero {
+    min-height: 320px;
+  }
+
+
+  .tournament-registration-overlay {
+    min-height: 320px;
+
+    padding: 30px 15px;
+  }
+
+
+  .tournament-registration-content h1 {
+    font-size: 38px;
+  }
+
+
+  .tournament-registration-content p {
+    font-size: 15px;
+  }
+
+
+  .tournament-form-section {
+    padding: 40px 15px;
+  }
+
+
+  .tournament-form-card {
+    padding: 25px 20px;
+
+    border-radius: 14px;
+  }
+
+
+  .tournament-form-header h2 {
+    font-size: 26px;
+  }
+
+}

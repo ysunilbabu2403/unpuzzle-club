@@ -1,0 +1,602 @@
+
+/* =====================================================
+   VISHAL CHESS ACADEMY
+   COACHES PAGE
+===================================================== */
+
+.coaches-page {
+  --coach-bg: #171717;
+  --coach-surface: #222222;
+  --coach-gold: #c7a76b;
+  --coach-beige: #e9dfcc;
+  --coach-text: #e8e5df;
+  --coach-muted: #aaa69e;
+
+  min-height: 100vh;
+  background: var(--coach-bg);
+  color: var(--coach-text);
+  font-family: inherit;
+  overflow-x: hidden;
+}
+
+.coaches-page * {
+  box-sizing: border-box;
+}
+
+.coaches-page a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.coaches-header {
+  width: 100%;
+  background: #111111;
+  border-bottom: 1px solid rgba(199, 167, 107, 0.2);
+  position: relative;
+  z-index: 10;
+}
+
+.coaches-header-inner {
+  max-width: 1240px;
+  min-height: 82px;
+  margin: auto;
+  padding: 0 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.coaches-brand {
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: var(--coach-beige) !important;
+  white-space: nowrap;
+}
+
+.coaches-brand span {
+  color: var(--coach-gold);
+}
+
+.coaches-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.coaches-nav a {
+  color: #d0ccc4;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.25s ease;
+  position: relative;
+  padding: 10px 0;
+}
+
+.coaches-nav a:hover,
+.coaches-nav a.active {
+  color: var(--coach-gold);
+}
+
+.coaches-nav a.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: var(--coach-gold);
+  bottom: 2px;
+  left: 0;
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.coaches-hero {
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 75px 25px;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(199, 167, 107, 0.11),
+      transparent 65%
+    ),
+    linear-gradient(135deg, #202020, #151515);
+  border-bottom: 1px solid rgba(199, 167, 107, 0.12);
+}
+
+.coaches-hero-content {
+  max-width: 760px;
+}
+
+.coaches-eyebrow {
+  color: var(--coach-gold);
+  font-size: 11px;
+  letter-spacing: 4px;
+  font-weight: 600;
+}
+
+.coaches-hero h1 {
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 1.15;
+  color: var(--coach-beige);
+  font-weight: 700;
+  margin: 18px 0;
+}
+
+.coaches-hero h1 span {
+  color: var(--coach-gold);
+}
+
+.coaches-hero-content > p {
+  max-width: 630px;
+  margin: auto;
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--coach-muted);
+}
+
+.hero-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: var(--coach-gold);
+  margin-top: 27px;
+  font-size: 22px;
+}
+
+.hero-divider span {
+  height: 1px;
+  width: 65px;
+  background: rgba(199, 167, 107, 0.45);
+}
+
+/* =====================================================
+   COACH PROFILES
+===================================================== */
+
+.coaches-list {
+  max-width: 1180px;
+  margin: auto;
+  padding: 35px 35px 65px;
+}
+
+.coach-profile {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: center;
+  gap: 75px;
+
+  padding: 65px 0;
+  border-bottom: 1px solid rgba(199, 167, 107, 0.17);
+}
+
+.coach-profile:last-child {
+  border-bottom: none;
+}
+
+.coach-profile.coach-reverse {
+  grid-template-columns: 1.15fr 0.85fr;
+}
+
+.coach-reverse .coach-image-wrapper {
+  order: 2;
+}
+
+.coach-reverse .coach-content {
+  order: 1;
+}
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.coach-image-wrapper {
+  width: 100%;
+  height: 440px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #292929;
+  border: 1px solid rgba(199, 167, 107, 0.25);
+}
+
+.coach-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center 30%;
+  transition: transform 0.7s ease;
+}
+
+.coach-image-wrapper:hover .coach-image {
+  transform: scale(1.045);
+}
+
+.coach-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.42),
+    transparent 40%
+  );
+  pointer-events: none;
+}
+
+.coach-number {
+  position: absolute;
+  bottom: 18px;
+  left: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 13px;
+  letter-spacing: 3px;
+}
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.coach-content {
+  min-width: 0;
+}
+
+.coach-role {
+  display: inline-block;
+  color: var(--coach-gold);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 13px;
+}
+
+.coach-content h2 {
+  font-size: clamp(30px, 3vw, 43px);
+  line-height: 1.2;
+  margin: 0 0 14px;
+  color: var(--coach-beige);
+  font-weight: 650;
+}
+
+.coach-rating {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #d8d2c6;
+  font-size: 14px;
+  margin-bottom: 19px;
+}
+
+.rating-icon {
+  color: var(--coach-gold);
+  font-size: 23px;
+}
+
+.coach-specialties {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 25px;
+}
+
+.coach-specialties span {
+  padding: 8px 13px;
+  background: rgba(199, 167, 107, 0.09);
+  border: 1px solid rgba(199, 167, 107, 0.3);
+  color: var(--coach-gold);
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  border-radius: 3px;
+}
+
+.coach-description p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #c0bdb6;
+  margin: 0 0 14px;
+}
+
+/* =====================================================
+   COACHING PHILOSOPHY
+===================================================== */
+
+.coach-philosophy {
+  margin-top: 27px;
+  padding: 19px 21px;
+  border-left: 3px solid var(--coach-gold);
+  background: rgba(199, 167, 107, 0.055);
+}
+
+.philosophy-label {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--coach-gold);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.coach-philosophy p {
+  color: var(--coach-beige);
+  font-size: 14px;
+  line-height: 1.8;
+  font-style: italic;
+  margin: 0;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.coaches-footer {
+  background: #101010;
+  border-top: 1px solid rgba(199, 167, 107, 0.2);
+  padding: 40px 35px 0;
+}
+
+.coaches-footer-inner {
+  max-width: 1180px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding-bottom: 32px;
+}
+
+.coaches-footer h3 {
+  color: var(--coach-gold);
+  font-size: 19px;
+  margin: 0 0 8px;
+}
+
+.coaches-footer p {
+  color: var(--coach-muted);
+  font-size: 13px;
+  margin: 0;
+}
+
+.coaches-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.coaches-contact a {
+  color: #d5d0c6;
+  font-size: 13px;
+  transition: color 0.2s ease;
+}
+
+.coaches-contact a:hover {
+  color: var(--coach-gold);
+}
+
+.coaches-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+  padding: 17px 10px;
+  font-size: 11px;
+  color: #77736d;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+  .coaches-header-inner {
+    padding: 0 22px;
+  }
+
+  .coaches-nav {
+    gap: 18px;
+  }
+
+  .coaches-list {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .coach-profile,
+  .coach-profile.coach-reverse {
+    gap: 35px;
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+
+  .coach-image-wrapper {
+    height: 390px;
+  }
+
+  .coach-reverse .coach-image-wrapper {
+    order: 2;
+  }
+
+  .coach-reverse .coach-content {
+    order: 1;
+  }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+  .coaches-header-inner {
+    min-height: auto;
+    padding: 17px 15px;
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  .coaches-brand {
+    font-size: 19px;
+  }
+
+  .coaches-nav {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 9px 20px;
+  }
+
+  .coaches-nav a {
+    font-size: 12px;
+  }
+
+  .coaches-hero {
+    min-height: 285px;
+    padding: 55px 20px;
+  }
+
+  .coaches-eyebrow {
+    font-size: 9px;
+    letter-spacing: 2.5px;
+  }
+
+  .coaches-hero h1 {
+    font-size: 38px;
+  }
+
+  .coaches-hero-content > p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .coaches-list {
+    padding: 15px 19px 40px;
+  }
+
+  .coach-profile,
+  .coach-profile.coach-reverse {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 25px;
+    padding: 35px 0;
+  }
+
+  .coach-profile.coach-reverse .coach-image-wrapper,
+  .coach-profile.coach-reverse .coach-content {
+    order: initial;
+  }
+
+  .coach-image-wrapper {
+    width: 100%;
+    max-width: 260px;
+    height: 280px;
+    margin: 0 auto 25px;
+    overflow: hidden;
+    border-radius: 16px;
+  }
+  
+  .coach-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .coach-content h2 {
+    font-size: 31px;
+  }
+
+  .coach-role {
+    font-size: 10px;
+  }
+
+  .coach-description p {
+    font-size: 13px;
+    line-height: 1.85;
+  }
+
+  .coach-philosophy {
+    padding: 16px;
+  }
+
+  .coach-philosophy p {
+    font-size: 13px;
+  }
+
+  .coaches-footer {
+    padding: 30px 20px 0;
+  }
+
+  .coaches-footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+  }
+
+  .coaches-contact {
+    align-items: flex-start;
+  }
+
+  .coaches-footer-bottom {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+}
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 375px) {
+  .coaches-nav {
+    gap: 8px 14px;
+  }
+
+  .coaches-nav a {
+    font-size: 11px;
+  }
+
+  .coach-image-wrapper {
+    width: 200px;
+    max-width: 100%;
+    height: 220px;
+    margin: 0 auto 20px;
+    border-radius: 14px;
+  }
+
+  .coach-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .coach-profile {
+    gap: 18px;
+    padding: 30px 0;
+  }
+
+  .coach-content {
+    padding: 0 5px;
+  }
+
+  .coach-content h2 {
+    font-size: 27px;
+  }
+
+  .coach-specialties span {
+    font-size: 10px;
+    padding: 7px 10px;
+  }
+}
