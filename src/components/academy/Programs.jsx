@@ -87,7 +87,7 @@
 //   export default Programs;
 
 
-
+import { Link } from "react-router-dom";
 
 const programs = [
   {
@@ -186,9 +186,9 @@ function Programs() {
                   ))}
                 </ul>
 
-                <a href="/student-registration">
+                <Link to="/student-registration">
                   Join Program →
-                </a>
+                </Link>
 
               </article>
             ))}
