@@ -200,9 +200,14 @@ function TournamentRegistrationForm() {
           name="mobileNumber"
           type="tel"
           placeholder="Enter 10-digit mobile number"
-          pattern="[0-9]{10}"
           maxLength="10"
           inputMode="numeric"
+          pattern="[0-9]{10}"
+          onInput={(event) => {
+            event.target.value = event.target.value
+            .replace(/\D/g, "")
+            .slice(0, 10);
+          }}
           required
         />
       </div>

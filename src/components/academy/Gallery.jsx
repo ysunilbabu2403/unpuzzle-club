@@ -6,6 +6,8 @@ import gallery02 from "../../assets/academy/gallery-02.jpg";
 import gallery03 from "../../assets/academy/gallery-03.jpg";
 import gallery04 from "../../assets/academy/gallery-04.jpg";
 import gallery05 from "../../assets/academy/gallery-05.jpg";
+import AcademyFooter from "./AcademyFooter";
+
 
 const galleryItems = [
   {
@@ -134,6 +136,7 @@ function Gallery() {
           ))}
         </div>
       </div>
+      <AcademyFooter />
     </section>
   );
 }

@@ -1,0 +1,595 @@
+/* =========================================================
+   VISHAL CHESS ACADEMY
+   TOURNAMENT LISTING PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   MAIN PAGE
+   ========================================================= */
+
+.tournament-registration-page {
+  min-height: 100vh;
+  background: #f3f0e9;
+  color: #29251f;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.tournament-registration-hero {
+  min-height: 360px;
+
+  background-image: url("../assets/images/tournament-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+}
+
+.tournament-registration-overlay {
+  min-height: 360px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 50px 20px;
+
+  background: rgba(0, 0, 0, 0.48);
+}
+
+.tournament-registration-content {
+  max-width: 800px;
+
+  text-align: center;
+  color: #ffffff;
+}
+
+.tournament-registration-content h1 {
+  margin: 0;
+
+  font-size: clamp(42px, 6vw, 68px);
+  line-height: 1.1;
+
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.tournament-registration-content p {
+  max-width: 620px;
+
+  margin: 18px auto 0;
+
+  font-size: 17px;
+  line-height: 1.7;
+
+  color: #eeeeee;
+}
+
+
+/* =========================================================
+   TOURNAMENTS SECTION
+   ========================================================= */
+
+.tournaments-section {
+  padding: 70px 20px 90px;
+}
+
+.tournaments-container {
+  width: 100%;
+  max-width: 1180px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.tournaments-heading {
+  max-width: 700px;
+
+  margin: 0 auto 50px;
+
+  text-align: center;
+}
+
+.tournaments-heading > span {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #356b45;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.tournaments-heading h2 {
+  margin: 0;
+
+  color: #29251f;
+
+  font-size: clamp(30px, 4vw, 42px);
+  line-height: 1.25;
+
+  font-weight: 700;
+}
+
+.tournaments-heading p {
+  max-width: 600px;
+
+  margin: 15px auto 0;
+
+  color: #6d665d;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   TOURNAMENT CARD
+   ========================================================= */
+
+.tournament-card {
+  width: 100%;
+
+  margin-bottom: 45px;
+
+  display: grid;
+
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+
+  background: #ffffff;
+
+  border: 1px solid #ddd6cc;
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   POSTER
+   ========================================================= */
+
+.tournament-card-poster {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: #e7e2d9;
+}
+
+.tournament-card-poster img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+
+  border-radius: 8px;
+}
+
+
+/*
+   Desktop poster size
+
+   The image is deliberately not allowed to become
+   extremely tall. This keeps the tournament card
+   compact and prevents one tournament from occupying
+   the entire page.
+*/
+
+.tournament-card-poster .tournament-poster-landscape {
+  max-width: 560px;
+}
+
+.tournament-card-poster .tournament-poster-mobile {
+  display: none;
+}
+
+
+/* =========================================================
+   TOURNAMENT CONTENT
+   ========================================================= */
+
+.tournament-card-content {
+  padding: 42px 42px 40px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  box-sizing: border-box;
+}
+
+
+/* Academy label */
+
+.tournament-card-label {
+  margin: 0 0 10px;
+
+  color: #356b45;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+
+/* Tournament title */
+
+.tournament-card-content h3 {
+  margin: 0;
+
+  color: #29251f;
+
+  font-size: clamp(28px, 3vw, 38px);
+  line-height: 1.2;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.tournament-card-description {
+  margin: 18px 0 0;
+
+  color: #625c54;
+
+  font-size: 15px;
+  line-height: 1.8;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   TOURNAMENT INFORMATION
+   ========================================================= */
+
+.tournament-card-info {
+  margin-top: 28px;
+
+  padding: 22px 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  column-gap: 25px;
+  row-gap: 20px;
+
+  border-top: 1px solid #ddd6cc;
+  border-bottom: 1px solid #ddd6cc;
+}
+
+.tournament-card-info > div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.tournament-card-info span {
+  color: #81796f;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.tournament-card-info strong {
+  color: #29251f;
+
+  font-size: 14px;
+  line-height: 1.4;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   PRIZES
+   ========================================================= */
+
+.tournament-card-prizes {
+  margin-top: 22px;
+}
+
+.tournament-card-prizes > span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #356b45;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.tournament-card-prizes p {
+  margin: 0;
+
+  color: #625c54;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.tournament-card-prizes strong {
+  color: #29251f;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   REGISTER BUTTON
+   ========================================================= */
+
+.tournament-register-button {
+  align-self: flex-start;
+
+  margin-top: 28px;
+
+  padding: 13px 26px;
+
+  border: 1px solid #29251f;
+  border-radius: 5px;
+
+  background: #29251f;
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  letter-spacing: 0.04em;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.tournament-register-button:hover {
+  background: #356b45;
+  border-color: #356b45;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 7px 18px rgba(53, 107, 69, 0.18);
+}
+
+.tournament-register-button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .tournament-card {
+    grid-template-columns: 1fr;
+  }
+
+  .tournament-card-poster {
+    padding: 22px;
+  }
+
+  .tournament-card-poster .tournament-poster-landscape {
+    max-width: 700px;
+  }
+
+  .tournament-card-content {
+    padding: 35px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  /* Hero */
+
+  .tournament-registration-hero {
+    min-height: 300px;
+  }
+
+  .tournament-registration-overlay {
+    min-height: 300px;
+
+    padding: 35px 18px;
+  }
+
+  .tournament-registration-content h1 {
+    font-size: 38px;
+  }
+
+  .tournament-registration-content p {
+    margin-top: 13px;
+
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+
+  /* Tournament section */
+
+  .tournaments-section {
+    padding: 48px 15px 65px;
+  }
+
+  .tournaments-heading {
+    margin-bottom: 35px;
+  }
+
+  .tournaments-heading h2 {
+    font-size: 29px;
+  }
+
+  .tournaments-heading p {
+    font-size: 14px;
+  }
+
+
+  /* Card */
+
+  .tournament-card {
+    margin-bottom: 30px;
+
+    border-radius: 11px;
+  }
+
+
+  /* Poster */
+
+  .tournament-card-poster {
+    padding: 12px;
+
+    background: #e7e2d9;
+  }
+
+  .tournament-card-poster .tournament-poster-landscape {
+    display: none;
+  }
+
+  .tournament-card-poster .tournament-poster-mobile {
+    display: block;
+
+    width: 100%;
+    max-width: 420px;
+  }
+
+
+  /* Content */
+
+  .tournament-card-content {
+    padding: 28px 22px 30px;
+  }
+
+  .tournament-card-label {
+    font-size: 10px;
+  }
+
+  .tournament-card-content h3 {
+    font-size: 27px;
+  }
+
+  .tournament-card-description {
+    margin-top: 14px;
+
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+
+  /* Information */
+
+  .tournament-card-info {
+    margin-top: 24px;
+
+    padding: 19px 0;
+
+    column-gap: 15px;
+    row-gap: 17px;
+  }
+
+  .tournament-card-info span {
+    font-size: 9px;
+  }
+
+  .tournament-card-info strong {
+    font-size: 13px;
+  }
+
+
+  /* Prizes */
+
+  .tournament-card-prizes {
+    margin-top: 20px;
+  }
+
+  .tournament-card-prizes p {
+    font-size: 13px;
+  }
+
+
+  /* Register */
+
+  .tournament-register-button {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 13px 20px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .tournaments-section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .tournament-card-content {
+    padding: 24px 18px 27px;
+  }
+
+  .tournament-card-content h3 {
+    font-size: 24px;
+  }
+
+  .tournament-card-info {
+    grid-template-columns: 1fr;
+  }
+
+  .tournament-card-info strong {
+    font-size: 14px;
+  }
+}

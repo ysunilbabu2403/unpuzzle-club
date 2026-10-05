@@ -31,6 +31,8 @@ function AcademyHome() {
         <Locations />
 
         <Gallery />
+
+        {/* <AcademyFooter /> */}
       </main>
 
       {/* Contact Footer */}

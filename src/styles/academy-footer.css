@@ -1,0 +1,143 @@
+.academy-footer {
+    width: 100%;
+    background: transparent;
+  
+    color: var(--academy-text);
+  
+    padding: 42px 0 30px;
+  
+    border-top: 1px solid rgba(199, 167, 107, 0.28);
+  }
+  
+  .footer-container {
+    width: min(
+      calc(100% - 48px),
+      var(--academy-max-width)
+    );
+  
+    margin: 0 auto;
+  
+    text-align: center;
+  }
+  
+  .footer-container h2 {
+    margin: 0 0 22px;
+  
+    color: var(--academy-accent);
+  
+    font-size: 13px;
+    font-weight: 700;
+  
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+  }
+  
+  /* .footer-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  
+    gap: 10px 28px;
+  } */
+/*   
+  .footer-contact a {
+    color: var(--academy-text-soft);
+  
+    font-size: 13px;
+    text-decoration: none;
+  
+    transition: color 0.25s ease;
+  }
+  
+  .footer-contact a:hover {
+    color: var(--academy-accent-light);
+  }
+   */
+   .footer-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px 32px;
+  }
+  
+  .footer-contact a {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+  
+    color: var(--academy-text-soft);
+    font-size: 14px;
+    font-weight: 500;
+  
+    text-decoration: none;
+  
+    transition:
+      color 0.25s ease,
+      transform 0.25s ease;
+  }
+  
+  .footer-contact a svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+  
+  .footer-contact a:hover {
+    color: var(--academy-accent-light);
+    transform: translateY(-2px);
+  }
+  /* =========================
+     MOBILE
+     ========================= */
+  
+  /* @media (max-width: 700px) {
+  
+    .academy-footer {
+      padding: 36px 0 28px;
+    }
+  
+    .footer-container {
+      width: calc(100% - 32px);
+    }
+  
+    .footer-contact {
+      flex-direction: column;
+      gap: 13px;
+    }
+  } */
+  @media (max-width: 700px) {
+    .footer-contact {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .footer-contact a {
+      font-size: 14px;
+    }
+  
+    .footer-contact a svg {
+      width: 19px;
+      height: 19px;
+    }
+  }
+  
+  /* =========================
+     SMALL MOBILE
+     ========================= */
+  
+  @media (max-width: 390px) {
+  
+    .academy-footer {
+      padding: 32px 0 25px;
+    }
+  
+    .footer-container {
+      width: calc(100% - 24px);
+    }
+  
+    .footer-contact {
+      gap: 12px;
+    }
+  }

@@ -4,6 +4,7 @@ import StudentRegistration from "./pages/StudentRegistration";
 import AcademyHome from "./pages/AcademyHome";
 import TournamentRegistration from "./pages/TournamentRegistration";
 import Coaches from "./pages/Coaches";
+import TournamentRegistrationFormPage from "./pages/TournamentRegistrationFormPage";
 
 function App() {
   return (
@@ -28,6 +29,11 @@ function App() {
           path="/coaches"
           element={<Coaches />}
         />
+
+      <Route
+        path="/tournament-registration/form"
+        element={<TournamentRegistrationFormPage />}
+      />
 
       </Routes>
     </BrowserRouter>

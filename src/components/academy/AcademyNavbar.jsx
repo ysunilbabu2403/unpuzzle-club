@@ -13,14 +13,6 @@ function AcademyNavbar() {
     <header className="academy-navbar">
       <div className="academy-nav-container">
 
-        <Link
-          to="/"
-          className="academy-nav-logo"
-          onClick={closeMenu}
-        >
-          VISHAL CHESS ACADEMY
-        </Link>
-
         <button
           className={`academy-menu-button ${menuOpen ? "active" : ""}`}
           onClick={() => setMenuOpen(!menuOpen)}
