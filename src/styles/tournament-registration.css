@@ -160,8 +160,9 @@
 
   outline: none;
 
-  transition: border-color 0.2s ease,
-              box-shadow 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 
@@ -170,6 +171,139 @@
   border-color: #8b6f47;
 
   box-shadow: 0 0 0 3px rgba(139, 111, 71, 0.12);
+}
+
+
+/* =========================================================
+   PAYMENT SECTION
+   ========================================================= */
+
+.payment-section {
+  margin-top: 5px;
+
+  padding: 25px;
+
+  background: #f4efe7;
+
+  border: 1px solid #e0d5c8;
+
+  border-radius: 14px;
+
+  text-align: center;
+}
+
+
+.payment-section h3 {
+  margin: 0 0 15px;
+
+  font-size: 23px;
+
+  color: #29241f;
+}
+
+
+.payment-section p {
+  margin: 8px 0;
+
+  color: #5f574f;
+
+  font-size: 15px;
+
+  line-height: 1.5;
+}
+
+
+.payment-section strong {
+  color: #29241f;
+}
+
+
+/* =========================================================
+   QR SCANNER
+   ========================================================= */
+
+.payment-scanner {
+  display: flex;
+
+  justify-content: center;
+
+  margin: 20px 0;
+}
+
+
+.payment-scanner img {
+  width: 220px;
+  height: 220px;
+
+  object-fit: contain;
+
+  display: block;
+
+  background: #ffffff;
+
+  padding: 10px;
+
+  border-radius: 10px;
+
+  border: 1px solid #d8cec2;
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+
+.payment-note {
+  max-width: 500px;
+
+  margin-left: auto !important;
+  margin-right: auto !important;
+
+  font-size: 14px !important;
+
+  color: #6b6259 !important;
+}
+
+
+/* =========================================================
+   FILE UPLOAD
+   ========================================================= */
+
+.tournament-registration-form input[type="file"] {
+  padding: 10px;
+
+  background: #ffffff;
+
+  cursor: pointer;
+}
+
+
+.tournament-registration-form input[type="file"]::file-selector-button {
+  margin-right: 12px;
+
+  padding: 8px 12px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #29241f;
+  color: #ffffff;
+
+  font-size: 13px;
+
+  cursor: pointer;
+}
+
+
+.tournament-registration-form input[type="file"]::file-selector-button:hover {
+  background: #8b6f47;
+}
+
+
+.tournament-registration-form small {
+  color: #8a8178;
+
+  font-size: 12px;
+
+  line-height: 1.4;
 }
 
 
@@ -252,6 +386,36 @@
 
   .tournament-form-header h2 {
     font-size: 26px;
+  }
+
+
+  /* QR IMAGE ON MOBILE */
+
+  .payment-section {
+    padding: 20px 15px;
+  }
+
+
+  .payment-section h3 {
+    font-size: 21px;
+  }
+
+
+  .payment-scanner img {
+    width: 190px;
+    height: 190px;
+
+    padding: 8px;
+  }
+
+
+  .payment-note {
+    font-size: 13px !important;
+  }
+
+
+  .tournament-registration-form input[type="file"] {
+    font-size: 13px;
   }
 
 }

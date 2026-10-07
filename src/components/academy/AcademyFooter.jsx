@@ -18,12 +18,20 @@ function AcademyFooter() {
             ✉ unpuzzleclub@gmail.com
           </a>
 
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.instagram.com/unpuzzleclub"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaInstagram />
             Instagram
           </a>
 
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://in.linkedin.com/company/unpuzzle-club"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaLinkedinIn />
             LinkedIn
           </a>
@@ -37,7 +45,15 @@ function AcademyFooter() {
             WhatsApp
           </a>
 
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          {/* <a href="#" target="_blank" rel="noopener noreferrer">
+            <FaYoutube />
+            YouTube
+          </a> */}
+          <a
+            href="https://youtube.com/@unpuzzleclub1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaYoutube />
             YouTube
           </a>

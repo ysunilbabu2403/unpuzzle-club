@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
-import landscapePoster
-  from "../assets/tournament/lposter.jpg";
+// import landscapePoster
+//   from "../assets/tournament/lposter.jpg";
 
 import mobilePoster
   from "../assets/tournament/mposter.jpg";
@@ -72,16 +72,16 @@ function TournamentRegistration() {
 
               <div className="tournament-card-poster">
 
-                {/* <img
-                  src={landscapePoster}
-                  alt="Vishal Chess Academy Internal Tournament"
-                  className="tournament-poster-landscape"
-                /> */}
-
                 <img
                   src={mobilePoster}
                   alt="Vishal Chess Academy Internal Tournament"
                   className="tournament-poster-landscape"
+                />
+
+                <img
+                  src={mobilePoster}
+                  alt="Vishal Chess Academy Internal Tournament"
+                  className="tournament-poster-mobile"
                 />
 
               </div>
